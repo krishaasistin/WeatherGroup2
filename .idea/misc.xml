@@ -6,11 +6,12 @@
         <entry key="..\:/OpenWeatherAPILesson/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/OpenWeatherAPILesson/app/src/main/res/layout/content_forecast_rv.xml" value="0.358695652173913" />
         <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/drawable/back.xml" value="0.196" />
-        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/drawable/bg_gradient.xml" value="0.196" />
+        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/drawable/bg_gradient.xml" value="0.144" />
+        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/drawable/rounded_corner.xml" value="0.2" />
         <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/layout/activity_view_more.xml" value="0.536" />
+        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/layout/activity_view_more.xml" value="0.4" />
         <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/layout/back.xml" value="0.24895833333333334" />
-        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/layout/content_forecast_rv.xml" value="0.536" />
+        <entry key="..\:/Users/krisha/Documents/JunicaWeather/app/src/main/res/layout/content_forecast_rv.xml" value="0.4" />
       </map>
     </option>
   </component>
