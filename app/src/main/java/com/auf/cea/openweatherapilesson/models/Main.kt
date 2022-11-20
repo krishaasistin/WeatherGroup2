@@ -1,5 +1,7 @@
 package com.auf.cea.openweatherapilesson.models
 
+import java.io.Serializable
+
 data class Main(
     var feels_like: Double,
     var grnd_level: Int,
@@ -10,4 +12,4 @@ data class Main(
     var temp_kf: Double,
     var temp_max: Double,
     var temp_min: Double
-)
+): Serializable

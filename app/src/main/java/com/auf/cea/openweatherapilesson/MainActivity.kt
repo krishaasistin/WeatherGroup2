@@ -2,9 +2,11 @@ package com.auf.cea.openweatherapilesson
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.auf.cea.openweatherapilesson.adapter.WeatherAdapter
@@ -71,9 +73,27 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
         val locationData = locationList[p2]
         getWeatherData(locationData.lat,locationData.lon)
+        showLoadingScreen()
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
 
+    }
+
+    fun showLoadingScreen(){
+        binding.progressBar.isVisible = true
+        binding.rvForecast.isVisible = false
+        object : CountDownTimer(3000,1000){
+            override fun onTick(p0: Long) {
+
+            }
+
+            override fun onFinish() {
+                binding.progressBar.isVisible = false
+                binding.rvForecast.isVisible = true
+
+            }
+
+        }.start()
     }
 }

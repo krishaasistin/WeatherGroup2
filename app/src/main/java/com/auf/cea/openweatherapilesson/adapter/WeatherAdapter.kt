@@ -23,10 +23,11 @@ class WeatherAdapter(private var forecastList: ArrayList<ForecastModel>, private
         fun bind (itemData: ForecastModel){
             val mainWeatherData = itemData.weather[0]
             binding.txtWeatherType.text = mainWeatherData.main
-            binding.txtTemp.text = String.format("%sc",itemData.main.temp)
-            binding.txtMinTemp.text = String.format("Min temp: %sc",itemData.main.temp_min)
-            binding.txtMaxTemp.text = String.format("Max temp: %sc", itemData.main.temp_max)
-            binding.txtHumidity.text = String.format("Humidity: %s%%", itemData.main.humidity)
+            binding.txtFeelsLike.text = String.format("Feels like \n%s°C", itemData.main.feels_like)
+            binding.txtTemp.text = String.format("%s°C",itemData.main.temp)
+            binding.txtMinTemp.text = String.format("Min | %s°C",itemData.main.temp_min)
+            binding.txtMaxTemp.text = String.format("Max | %s°C", itemData.main.temp_max)
+            binding.txtHumidity.text = String.format("Humidity \n%s%%", itemData.main.humidity)
             binding.txtDay.text = getDay(itemData.dt)
             binding.txtTime.text = getTime(itemData.dt)
             Glide.with(context)
@@ -35,15 +36,15 @@ class WeatherAdapter(private var forecastList: ArrayList<ForecastModel>, private
                 .into(binding.imgWeather)
 
             binding.btnViewMore.setOnClickListener{
-                val weatherData = forecastList[adapterPosition]
+//                val weatherData = forecastList[adapterPosition]
                 val intent  = Intent(context,ViewMore::class.java)
-                intent.putExtra(weatherData,weatherData[position])
+                intent.putExtra("weatherData", itemData)
                 context.startActivity(intent)
             }
 
-            binding.cvForecast.setOnClickListener{
-                Log.d(WeatherAdapter::class.java.simpleName,itemData.wind.speed.toString())
-            }
+//            binding.cvForecast.setOnClickListener{
+//                Log.d(WeatherAdapter::class.java.simpleName,itemData.wind.speed.toString())
+//            }
         }
     }
 
