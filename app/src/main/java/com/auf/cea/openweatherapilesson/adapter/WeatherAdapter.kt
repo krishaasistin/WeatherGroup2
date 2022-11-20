@@ -22,12 +22,7 @@ class WeatherAdapter(private var forecastList: ArrayList<ForecastModel>, private
     inner class WeatherViewHolder(private val binding: ContentForecastRvBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind (itemData: ForecastModel){
             val mainWeatherData = itemData.weather[0]
-            binding.txtWeatherType.text = mainWeatherData.main
-            binding.txtFeelsLike.text = String.format("Feels like \n%s°C", itemData.main.feels_like)
             binding.txtTemp.text = String.format("%s°C",itemData.main.temp)
-            binding.txtMinTemp.text = String.format("Min | %s°C",itemData.main.temp_min)
-            binding.txtMaxTemp.text = String.format("Max | %s°C", itemData.main.temp_max)
-            binding.txtHumidity.text = String.format("Humidity \n%s%%", itemData.main.humidity)
             binding.txtDay.text = getDay(itemData.dt)
             binding.txtTime.text = getTime(itemData.dt)
             Glide.with(context)

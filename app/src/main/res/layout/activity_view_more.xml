@@ -1,64 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewMore">
 
+    <ImageView
+        android:id="@+id/bgNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/image" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center"
-        android:weightSum="2">
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:weightSum="3">
 
-
-            <TextView
-                android:id="@+id/txt_rain_chance"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
-                android:layout_marginRight="2dp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/montserrat"
-                android:text="Chance of Rain \n00.00%"
-                android:background="@drawable/rounded_corner"/>
-
-            <TextView
-                android:id="@+id/txt_cloudiness"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner"
                 android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Feels Like"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14.5sp" />
+
+                <TextView
+                    android:id="@+id/txt_feels_like"
+                    android:layout_width="110dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text=" 🌡️\n00.00°C"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
-                android:layout_marginRight="2dp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/montserrat"
-                android:text="Cloudiness \n00.00%"
-                android:background="@drawable/rounded_corner"/>
-
-
-            <TextView
-                android:id="@+id/txt_wind_speed"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner"
                 android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Min Temp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_min_temp"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text=" ⬇️\n00.00°C"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
-                android:layout_marginRight="2dp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/montserrat"
-                android:text="Wind Speed \n00.00%"
-                android:background="@drawable/rounded_corner"/>
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Max Temp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_max_temp"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="⬆️\n00.00°C"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Chance of Rain"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt_rain_chance"
+                    android:layout_width="110dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text=" 🌧\n00.00%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Cloudiness"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_cloudiness"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text=" ☁\n00.00%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Humidity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_humidity"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="💧\n00.00%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -66,33 +282,243 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <TextView
-                android:id="@+id/txt_pressure"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
-                android:text="Pressure \n 1000hPa" />
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
 
-            <TextView
-                android:id="@+id/txt_gnd_level"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Ground Level Pressure \n 1000hPa" />
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Pressure"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/txt_sea_level"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/txt_pressure"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="💨\n1000 hPa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
-                android:text="Sea Level Pressure \n 1000hPa" />
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Ground Level Pressure "
+                    android:textColor="#FFFFFF"
+                    android:textSize="9.5sp" />
+
+                <TextView
+                    android:id="@+id/txt_gnd_level"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="🏔️️\n 1000 hPa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="114dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Sea Level Pressure "
+                    android:textColor="#FFFFFF"
+                    android:textSize="9.5sp" />
+
+                <TextView
+                    android:id="@+id/txt_sea_level"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="🌊\n 1000 hPa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Wind Speed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_wind_speed"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text=" 🌬️\n1000 m/s"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Visibility"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_visibility"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="👁️️\n 1000 m"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                tools:layout_editor_absoluteX="238dp"
+                tools:layout_editor_absoluteY="100dp">
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Wind Gust"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_wind_gust"
+                    android:layout_width="115dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="🌀️\n 1000 m/s"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 
