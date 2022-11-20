@@ -1,14 +1,18 @@
 package com.auf.cea.openweatherapilesson.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.auf.cea.openweatherapilesson.ViewMore
 import com.auf.cea.openweatherapilesson.constants.BASE_IMAGE_URL
+import com.auf.cea.openweatherapilesson.constants.WEATHER_FORECAST
 import com.auf.cea.openweatherapilesson.databinding.ContentForecastRvBinding
 import com.auf.cea.openweatherapilesson.models.ForecastModel
 import com.bumptech.glide.Glide
+import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -29,6 +33,13 @@ class WeatherAdapter(private var forecastList: ArrayList<ForecastModel>, private
                 .load(BASE_IMAGE_URL+mainWeatherData.icon+".png")
                 .override(200,200)
                 .into(binding.imgWeather)
+
+            binding.btnViewMore.setOnClickListener{
+                val weatherData = forecastList[adapterPosition]
+                val intent  = Intent(context,ViewMore::class.java)
+                intent.putExtra(weatherData,weatherData[position])
+                context.startActivity(intent)
+            }
 
             binding.cvForecast.setOnClickListener{
                 Log.d(WeatherAdapter::class.java.simpleName,itemData.wind.speed.toString())
